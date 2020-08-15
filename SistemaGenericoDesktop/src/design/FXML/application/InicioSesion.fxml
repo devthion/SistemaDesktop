@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="700.0" prefWidth="1400.0" stylesheets="@../Diseño/InicioSesion.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.InicioSesion">
+   <center>
+      <AnchorPane minWidth="400.0" prefHeight="598.0" prefWidth="571.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane prefHeight="427.0" prefWidth="409.0" style="-fx-background-color: #d8d8d8d8; -fx-background-radius: 20;" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="400.0" AnchorPane.rightAnchor="400.0" AnchorPane.topAnchor="30.0">
+               <children>
+                  <Button fx:id="btnIngresar" layoutX="22.0" layoutY="515.0" mnemonicParsing="false" onAction="#onIngresarClick" prefHeight="25.0" prefWidth="515.0" text="Ingresar" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" />
+                  <TextField fx:id="txtNombreUsuario" alignment="CENTER" layoutX="101.0" layoutY="148.0" maxWidth="357.0" prefHeight="40.0" prefWidth="357.0" promptText="Nombre de usuario" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" />
+                  <Label contentDisplay="CENTER" layoutX="194.0" layoutY="57.0" prefHeight="45.0" prefWidth="212.0" style="-fx-font-size: 30px;" text="Inicio de Sesión" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" />
+                  <PasswordField fx:id="txtContrasenia" layoutX="100.0" layoutY="217.0" prefHeight="40.0" prefWidth="357.0" promptText="Contraseña" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" />
+               </children>
+            </AnchorPane>
+            <Button fx:id="btnSalir" layoutX="1290.0" layoutY="559.0" mnemonicParsing="false" onAction="#onSalirClick" style="-fx-background-color: white; -fx-border-color: white;" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0">
+               <graphic>
+                  <ImageView fitHeight="48.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../systemshutdown_104277.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin></AnchorPane>
+   </center>
+   <top>
+      <AnchorPane prefHeight="65.0" prefWidth="809.0" style="-fx-background-color: #222A3F;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="14.0" layoutY="18.0" prefHeight="30.0" prefWidth="103.0" style="-fx-text-fill: #FFFFFF;" text="DEVTHION" textFill="WHITE" />
+            <ImageView fitHeight="48.0" fitWidth="56.0" layoutX="117.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true" style="-fx-border-radius: 10;" styleClass="-fx-border-radius: 10 10 10 10;-fx-background-radius: 10 10 10 10;">
+               <image>
+                  <Image url="@../../devthion-icon.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>

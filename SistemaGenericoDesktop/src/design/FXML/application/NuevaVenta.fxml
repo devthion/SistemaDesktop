@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="700.0" prefWidth="1400.0" stylesheets="@../Diseño/MenuPrincipal.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.NuevaVenta">
+   <left>
+      <VBox prefHeight="635.0" prefWidth="190.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button contentDisplay="TOP" mnemonicParsing="false" prefHeight="400.0" prefWidth="189.0" text="NUEVA VENTA" textAlignment="CENTER" wrapText="true" />
+            <Button fx:id="btnPedidos1" contentDisplay="TOP" mnemonicParsing="false" onAction="#onPedidosClick" prefHeight="400.0" prefWidth="189.0" text="PEDIDOS PENDIENTES" textAlignment="CENTER" wrapText="true" />
+            <Button fx:id="btnVerProductos1" contentDisplay="TOP" mnemonicParsing="false" onAction="#onVerProductosClick" prefHeight="400.0" prefWidth="189.0" text="PRODUCTOS" textAlignment="CENTER" />
+            <Button fx:id="btnClientes" contentDisplay="TOP" mnemonicParsing="false" onAction="#onClientesClick" prefHeight="400.0" prefWidth="189.0" text="CLIENTES" textAlignment="CENTER" />
+            <Button fx:id="btnGastos" contentDisplay="TOP" mnemonicParsing="false" onAction="#onGastosClick" prefHeight="400.0" prefWidth="189.0" text="GASTOS" textAlignment="CENTER" />
+            <Button fx:id="btnHistorialVentas" contentDisplay="TOP" mnemonicParsing="false" onAction="#onHistorialVentasClick" prefHeight="400.0" prefWidth="189.0" text="HISTORIAL VENTAS" textAlignment="CENTER" textOverrun="LEADING_ELLIPSIS" wrapText="true" />
+         </children>
+      </VBox>
+   </left>
+   <top>
+      <AnchorPane prefHeight="65.0" prefWidth="1400.0" style="-fx-background-color: #222A3F;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnMenuPrincipal" layoutX="184.0" layoutY="8.0" mnemonicParsing="false" onAction="#onMenuPrincipalClick" prefHeight="49.0" prefWidth="237.0" text="Menu Principal" />
+            <Button fx:id="btnSalir" layoutX="671.0" layoutY="8.0" mnemonicParsing="false" onAction="#onSalirClick" prefHeight="49.0" prefWidth="189.0" text="Salir" />
+            <Button fx:id="btnAtencionAlCliente" layoutX="421.0" layoutY="8.0" mnemonicParsing="false" onAction="#onAtencionAlClienteClick" prefHeight="49.0" prefWidth="250.0" text="Atencion al Cliente" />
+            <Label layoutX="22.0" layoutY="18.0" prefHeight="30.0" prefWidth="103.0" style="-fx-text-fill: #FFFFFF;" text="DEVTHION" textFill="WHITE" />
+            <ImageView fitHeight="48.0" fitWidth="56.0" layoutX="125.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true" style="-fx-border-radius: 10;" styleClass="-fx-border-radius: 10 10 10 10;-fx-background-radius: 10 10 10 10;">
+               <image>
+                  <Image url="@../../devthion-icon.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView layoutX="200.0" layoutY="63.0" prefHeight="435.0" prefWidth="617.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="37.0" AnchorPane.rightAnchor="592.0" AnchorPane.topAnchor="100.0">
+               <columns>
+                  <TableColumn prefWidth="299.0" text="PRODUCTO" />
+                  <TableColumn maxWidth="3000.0" prefWidth="176.0" text="PRECIO" />
+                  <TableColumn maxWidth="3000.0" prefWidth="141.0" text="STOCK" />
+               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <TextField layoutX="194.0" layoutY="48.0" prefHeight="45.0" prefWidth="256.0" promptText="Buscar por Nombre" AnchorPane.rightAnchor="760.0" />
+            <Button contentDisplay="RIGHT" layoutX="287.0" layoutY="556.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="287.0" text="AGREGAR AL CARRITO" AnchorPane.bottomAnchor="34.0" AnchorPane.rightAnchor="596.0" />
+            <SplitMenuButton layoutX="461.0" layoutY="48.0" mnemonicParsing="false" text="CATEGORIA" AnchorPane.rightAnchor="592.0">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Quesos" />
+                <MenuItem mnemonicParsing="false" text="Galletitas" />
+              </items>
+            </SplitMenuButton>
+            <TableView layoutX="655.0" layoutY="100.0" prefHeight="293.0" prefWidth="518.0" AnchorPane.rightAnchor="37.0">
+               <columns>
+                  <TableColumn prefWidth="253.0" text="PRODUCTO" />
+                  <TableColumn prefWidth="112.0" text="CANTIDAD" />
+                  <TableColumn prefWidth="152.0" text="PRECIO TOTAL" />
+               </columns>
+            </TableView>
+            <Label layoutX="655.0" layoutY="70.0" text="CARRITO" AnchorPane.rightAnchor="474.0" />
+            <Button contentDisplay="RIGHT" layoutX="729.0" layoutY="425.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="370.0" text="SACAR DEL CARRITO" AnchorPane.rightAnchor="111.0">
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="39.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../carrito-de-compras.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="btnFinalizarVenta" layoutX="921.0" layoutY="579.0" mnemonicParsing="false" onAction="#onFinalizarVenta" prefHeight="45.0" prefWidth="260.0" style="-fx-background-color: green;" text="FINALIZAR VENTA" AnchorPane.rightAnchor="29.0" />
+            <Button fx:id="btnAgregarEnvio" contentDisplay="RIGHT" layoutX="729.0" layoutY="490.0" mnemonicParsing="false" onAction="#onAgregarEnvio" prefHeight="45.0" prefWidth="370.0" text="AGREGAR ENVIO " AnchorPane.rightAnchor="111.0">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../entrega.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button layoutX="655.0" layoutY="579.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="254.0" style="-fx-background-color: RED;" text="CANCELAR VENTA" AnchorPane.rightAnchor="301.0" />
+            <TextField layoutX="37.0" layoutY="555.0" prefHeight="47.0" prefWidth="125.0" promptText="Cantidad" AnchorPane.bottomAnchor="33.0" AnchorPane.leftAnchor="37.0" />
+            <Label layoutX="10.0" layoutY="70.0" text="PRODUCTOS" AnchorPane.leftAnchor="37.0" />
+            <ImageView fx:id="imgMas" fitHeight="43.0" fitWidth="46.0" layoutX="172.0" layoutY="557.0" onDragDetected="#onMasCantidadClick" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="172.0">
+               <image>
+                  <Image url="@../../google-mas.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgMenos" fitHeight="43.0" fitWidth="46.0" layoutX="217.0" layoutY="557.0" onDragDetected="#onMenosCantidadClick" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="217.0">
+               <image>
+                  <Image url="@../../menos.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

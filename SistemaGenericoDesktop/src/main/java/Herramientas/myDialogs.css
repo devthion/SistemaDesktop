@@ -1,0 +1,30 @@
+.myDialog{
+    -fx-background-color: #FFFFFF;
+}
+.myDialog > *.button-bar > *.container{
+    -fx-background-color: #FFFFFF;
+}
+.myDialog > *.label.content{
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+.myDialog:header *.header-panel{
+    -fx-background-color: #222A3F;
+}
+
+.dialog-pane .button{
+   -fx-background-color:white;
+   -fx-text-fill:#222A3F;
+   -fx-wrap-text: true;
+   -fx-cursor:hand;
+   -fx-border-color: #222A3F;
+   -fx-border-radius: 20;
+   -fx-background-radius: 20;
+ }
+
+.dialog-pane .button:hover{     
+  -fx-border-color: #1ED760;
+  -fx-border-radius: 20;
+  -fx-background-radius: 20;
+ }
+
