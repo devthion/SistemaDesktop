@@ -23,7 +23,7 @@ public class VerProductos {
 
     @FXML
     void onPedidosClick(ActionEvent event) {
-
+    	new MostrarPantalla().mostrarYCerrar("PedidosPendientes.fxml", "Pedidos Pendientes", btnPedidos1.getScene().getWindow());
     }
 
     @FXML

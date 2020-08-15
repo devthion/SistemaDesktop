@@ -65,7 +65,7 @@
             <Button layoutX="305.0" layoutY="565.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="255.0" text="CANCELAR PEDIDO" AnchorPane.leftAnchor="305.0" />
             <Button layoutX="567.0" layoutY="565.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="242.0" text="GENERAR REMITO" AnchorPane.leftAnchor="567.0" />
             <Label layoutX="37.0" layoutY="30.0" text="PEDIDOS" AnchorPane.leftAnchor="37.0" />
-            <Label layoutX="802.0" layoutY="30.0" text="ITEMS" />
+            <Label layoutX="802.0" layoutY="30.0" text="ITEMS" AnchorPane.rightAnchor="353.0" />
          </children>
       </AnchorPane>
    </center>
